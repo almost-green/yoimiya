@@ -1,0 +1,9 @@
+openedx=100
+print(openedx)
+'''
+不同的種類
+不同的行為
+不同的個性
+'''
+openedx="100"
+print(openedx)

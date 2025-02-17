@@ -1,0 +1,12 @@
+print('請去除註解符號了解為何會有錯誤產生')
+def fun1(arg1,arg2='default'):
+  print('arg1:',arg1)
+  print('arg2:',arg2)
+#fun1()
+print('-'*50)
+fun1(1)
+print('-'*50)
+fun1(1,2)
+print('-'*50)
+#fun1(1,2,3)
+print('-'*50)

@@ -1,0 +1,12 @@
+a=input('請輸入一個數字')
+print(type(a))
+b=a*2
+print(b)
+a=int(input('請輸入一個整數'))
+print(type(a))
+b=a*2
+print(b)
+a=float(input('請輸入一個浮點數'))
+print(type(a))
+b=a*2
+print(b)

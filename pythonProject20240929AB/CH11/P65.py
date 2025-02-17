@@ -1,0 +1,11 @@
+import numpy as np
+a = np.array([[1, 2, 3], [13, 6, 9], [12, 24, 36]])
+print(a)
+b = a.copy()
+print(b.reshape((1,9)))
+print(np.cumsum(a))
+print("---------------")
+print(np.cumsum(a,axis=0))
+print("---------------")
+print(np.cumsum(a,axis=1))
+print("---------------")

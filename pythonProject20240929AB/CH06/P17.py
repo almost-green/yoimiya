@@ -1,0 +1,16 @@
+def fun3(arg2='default',*arg3):
+  print('arg2:', arg2)
+  print('arg3:',arg3)
+  for each1 in arg3:
+    print(each1)
+    print('xx'*10)
+fun3()
+print('-'*50)
+fun3(1)
+print('-'*50)
+fun3(1,2)
+print('-'*50)
+fun3(1,2,3)
+print('-'*50)
+fun3(1,2,3,4,5,6)
+print('-'*50)

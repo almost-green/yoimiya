@@ -1,0 +1,11 @@
+import pandas as pd
+print('日期請調整為上課時的時間')
+a=pd.date_range('2024/11/24',periods=10)
+print(a)
+print('-'*70)
+a=pd.date_range('2024/11/24',periods=10,freq='W')
+print(a)
+print('-'*70)
+a=pd.date_range('2024/11/24',periods=10,freq='W-Mon')
+print(a)
+print('-'*70)

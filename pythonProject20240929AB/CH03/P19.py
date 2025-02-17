@@ -1,0 +1,8 @@
+list1=range(10)
+list2=range(1,10)
+list3=range(1,10,2)
+list4=range(10,1,-2)
+print(list(list1))
+print(list(list2))
+print(list(list3))
+print(list(list4))

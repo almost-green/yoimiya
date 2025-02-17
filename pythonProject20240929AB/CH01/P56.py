@@ -1,0 +1,17 @@
+openedx=100
+print(openedx.__class__)
+openedx="100"
+print(type(openedx))
+openedx=100.123
+print(type(openedx))
+openedx=100,'test'
+print(openedx.__class__)
+a=100
+b=a*10
+print(b)
+a=12.3
+b=a*10
+print(b)
+a='Hello'
+b=a*10
+print(b)

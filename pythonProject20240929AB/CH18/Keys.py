@@ -1,0 +1,3 @@
+line_notify_key = 'Qw85SFFtvG2A3Al7FxTZ4PI3LhDb4NwwrAotS1fTwMp'
+line_channel_secret ='105596790f0ccd94930fcefd6a0f0c70'
+line_access_token = 'zCqbwPldauA2+KLcbhOA79q8o6V3NgX/f9jXXKgw/R+3zE707PfwKri+8rJB+b/weXGpd2n+u3DrzxO78HphWWKtp8sghdah6pvHPU/9k16DYen/4w060pHZ4Iav+ERFASALsRF2dDprb2W3oRGtHAdB04t89/1O/w1cDnyilFU='
