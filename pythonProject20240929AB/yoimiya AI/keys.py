@@ -1,3 +1,0 @@
-line_notify_key = "xNCNDb2djpMZYmm7zxrwWv6jk7lRElembDsl4nSNhfX"
-line_channel_secret = "6c61ec522ff08136e4f705df8d3b5ae4"
-line_access_token = "GXJZJFTWy5z1tb85Ov+GLpPMv+qMy0Kd4DJVwtzHk1VOm4M5R48NdrnWqQZDQtuL8GzP3Jp0grEvrY+GQm1AisdiEl/sTxReVK9bVsCIHOnSrycj3okW6sZkLlSL+RVRFbKQygbSDePqEmMa9nroFgdB04t89/1O/w1cDnyilFU="
