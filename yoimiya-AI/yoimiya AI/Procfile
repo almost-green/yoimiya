@@ -1,2 +1,2 @@
-web: python -m gunicorn yoimiya:app
+web: python yoimiya.py
 
