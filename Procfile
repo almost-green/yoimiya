@@ -1,1 +1,1 @@
-web: python yoimiya.py
+web: python yoimiya-AI/yoimiya.py
