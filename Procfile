@@ -1,1 +1,1 @@
-web: gunicorn yoimiya:app
+web: python yoimiya.py
