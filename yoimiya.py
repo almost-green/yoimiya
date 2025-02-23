@@ -4,15 +4,20 @@ import os
 # 載入 .env 檔案中的環境變數
 load_dotenv()
 
-# 讀取環境變數
+# 測試讀取環境變數
 line_access_token = os.getenv("LINE_ACCESS_TOKEN")
 line_channel_secret = os.getenv("LINE_CHANNEL_SECRET")
 
-print(f"讀取的 LINE_ACCESS_TOKEN: {line_access_token}")
-print(f"讀取的 LINE_CHANNEL_SECRET: {line_channel_secret}")
+# 確認 .env 是否被正確載入
+print("⏬ 嘗試讀取環境變數... ⏬")
+print(f"LINE_ACCESS_TOKEN: {line_access_token}")
+print(f"LINE_CHANNEL_SECRET: {line_channel_secret}")
 
 if not line_access_token or not line_channel_secret:
     raise ValueError("❌ 環境變數未正確讀取！請檢查設定。")
+else:
+    print("✅ 環境變數讀取成功！")
+
 
 
 
