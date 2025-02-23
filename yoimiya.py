@@ -39,10 +39,10 @@ app = Flask(__name__)  # 創建 Flask 應用實例
 line_access_token = os.getenv("LINE_ACCESS_TOKEN")  
 line_channel_secret = os.getenv("LINE_CHANNEL_SECRET")  
 
-line_bot_api = LineBotApi(line_access_token)  # 創建 LineBotApi 實例
-handler = WebhookHandler(line_channel_secret)  # 創建 WebhookHandler 實例
+line_bot_api = LineBotApi(LINE_ACCESS_TOKEN)  # 創建 LineBotApi 實例
+handler = WebhookHandler(LINE_CHANNEL_SECRET)  # 創建 WebhookHandler 實例
 
-@app.route("/", methods=['POST'])  # 設置 webhook 路由
+@app.route("/callback", methods=['POST'])  # 設置 webhook 路由
 def callback():
     print(f"LINE_ACCESS_TOKEN: {line_access_token}")  # Debug 用
     print(f"LINE_CHANNEL_SECRET: {line_channel_secret}")  # Debug 用
@@ -80,7 +80,7 @@ app = Flask(__name__)  # 創建一個 Flask 應用實例，__name__ 表示當前
 line_bot_api = LineBotApi(LINE_ACCESS_TOKEN)  # 創建 LineBotApi 實例，傳入你的 Channel Access Token
 handler = WebhookHandler(LINE_CHANNEL_SECRET)  # 創建 WebhookHandler 實例，傳入你的 Channel Secret
 
-@app.route("/", methods=['POST'])  # 設置路由，當 POST 請求發送到根目錄執行根目錄函數
+@app.route("/callback", methods=['POST'])  # 設置路由，當 POST 請求發送到根目錄執行根目錄函數
 def callback():  # 定義 callback 函數，這是處理 LINE 事件的核心函數
     # 獲取 Webhook 事件的簽名
     signature = request.headers['X-Line-Signature']  # 從請求標頭中提取 X-Line-Signature，用來驗證請求來源
