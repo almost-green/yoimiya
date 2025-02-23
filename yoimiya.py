@@ -36,12 +36,12 @@ if __name__ == "__main__":
 from flask import Flask, request, abort  # 匯入 Flask 庫中的 Flask 類別、request 對象和 abort 函數
 from linebot import WebhookHandler, LineBotApi  # 匯入 LINE SDK 的 WebhookHandler 和 LineBotApi
 from linebot.models import MessageEvent, TextMessage  # 匯入 LINE SDK 中的 MessageEvent 和 TextMessage 類別
-from keys import line_access_token, line_channel_secret
+# from keys import line_access_token, line_channel_secret
 app = Flask(__name__)  # 創建一個 Flask 應用實例，__name__ 表示當前模塊名稱
 
 # 這裡填入你的 LINE Channel 的密鑰
-line_bot_api = LineBotApi(line_access_token)  # 創建 LineBotApi 實例，傳入你的 Channel Access Token
-handler = WebhookHandler(line_channel_secret)  # 創建 WebhookHandler 實例，傳入你的 Channel Secret
+line_bot_api = LineBotApi(LINE_ACCESS_TOKEN)  # 創建 LineBotApi 實例，傳入你的 Channel Access Token
+handler = WebhookHandler(LINE_CHANNEL_SECRET)  # 創建 WebhookHandler 實例，傳入你的 Channel Secret
 
 @app.route("/", methods=['POST'])  # 設置路由，當 POST 請求發送到根目錄執行根目錄函數
 def callback():  # 定義 callback 函數，這是處理 LINE 事件的核心函數
