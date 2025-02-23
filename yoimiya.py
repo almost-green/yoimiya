@@ -1,36 +1,39 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
+# import os
+#
+# # 載入 .env 檔案中的環境變數
+# load_dotenv()
+#
+# # 測試讀取環境變數
+# line_access_token = os.getenv("LINE_ACCESS_TOKEN")
+# line_channel_secret = os.getenv("LINE_CHANNEL_SECRET")
+#
+# # 確認 .env 是否被正確載入
+# print("⏬ 嘗試讀取環境變數... ⏬")
+# print(f"LINE_ACCESS_TOKEN: {line_access_token}")
+# print(f"LINE_CHANNEL_SECRET: {line_channel_secret}")
+#
+# if not line_access_token or not line_channel_secret:
+#     raise ValueError("❌ 環境變數未正確讀取！請檢查設定。")
+# else:
+#     print("✅ 環境變數讀取成功！")
+#
+
+
+
+
+
+
+
+
+
 import os
-
-# 載入 .env 檔案中的環境變數
-load_dotenv()
-
-# 測試讀取環境變數
-line_access_token = os.getenv("LINE_ACCESS_TOKEN")
-line_channel_secret = os.getenv("LINE_CHANNEL_SECRET")
-
-# 確認 .env 是否被正確載入
-print("⏬ 嘗試讀取環境變數... ⏬")
-print(f"LINE_ACCESS_TOKEN: {line_access_token}")
-print(f"LINE_CHANNEL_SECRET: {line_channel_secret}")
-
-if not line_access_token or not line_channel_secret:
-    raise ValueError("❌ 環境變數未正確讀取！請檢查設定。")
-else:
-    print("✅ 環境變數讀取成功！")
-
-
-
-
-
-
-
-
-
-
-
 from flask import Flask, request, abort  # 匯入 Flask
 from linebot import WebhookHandler, LineBotApi  # 匯入 LINE SDK
 from linebot.models import MessageEvent, TextMessage, TextSendMessage  # 匯入 LINE SDK 模型
+LINE_ACCESS_TOKEN = "GXJZJFTWy5z1tb85Ov+GLpPMv+qMy0Kd4DJVwtzHk1VOm4M5R48NdrnWqQZDQtuL8GzP3Jp0grEvrY+GQm1AisdiEl/sTxReVK9bVsCIHOnSrycj3okW6sZkLlSL+RVRFbKQygbSDePqEmMa9nroFgdB04t89/1O/w1cDnyilFU="
+LINE_CHANNEL_SECRET = "6c61ec522ff08136e4f705df8d3b5ae4"
+
 app = Flask(__name__)  # 創建 Flask 應用實例
 # **從環境變數讀取 LINE Bot 密鑰**
 line_access_token = os.getenv("LINE_ACCESS_TOKEN")  
@@ -71,8 +74,6 @@ from flask import Flask, request, abort  # 匯入 Flask 庫中的 Flask 類別�
 from linebot import WebhookHandler, LineBotApi  # 匯入 LINE SDK 的 WebhookHandler 和 LineBotApi
 from linebot.models import MessageEvent, TextMessage  # 匯入 LINE SDK 中的 MessageEvent 和 TextMessage 類別
 # from keys import line_access_token, line_channel_secret
-# LINE_ACCESS_TOKEN = "GXJZJFTWy5z1tb85Ov+GLpPMv+qMy0Kd4DJVwtzHk1VOm4M5R48NdrnWqQZDQtuL8GzP3Jp0grEvrY+GQm1AisdiEl/sTxReVK9bVsCIHOnSrycj3okW6sZkLlSL+RVRFbKQygbSDePqEmMa9nroFgdB04t89/1O/w1cDnyilFU="
-# LINE_CHANNEL_SECRET = "6c61ec522ff08136e4f705df8d3b5ae4"
 app = Flask(__name__)  # 創建一個 Flask 應用實例，__name__ 表示當前模塊名稱
 
 # 這裡填入你的 LINE Channel 的密鑰
